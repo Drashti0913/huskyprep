@@ -40,6 +40,7 @@ export default function ExperienceForm({ meta, editing, onSaved, onCancel }) {
 
   async function handleSubmit(event) {
     event.preventDefault();
+    if (busy) return;
     setBusy(true);
     setErrors({});
     setMessage("");
